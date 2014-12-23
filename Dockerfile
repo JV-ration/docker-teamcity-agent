@@ -1,4 +1,5 @@
-FROM sadovnikov/centos-base
+FROM sadovnikov/container-base
+MAINTAINER Viktor Sadovnikov <viktor@jv-ration.com>
 
 ADD setup-agent.sh /setup-agent.sh
 RUN adduser teamcity
