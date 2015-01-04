@@ -1,14 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/sh -e
 
-export JAVA_HOME=/usr/java/default
 AGENT_DIR="${HOME}/agent"
-
-if [ -z "$TEAMCITY_SERVER" ]; then
-    echo "Fatal error: TEAMCITY_SERVER is not set."
-    echo "Launch this container with -e TEAMCITY_SERVER=http://servername:port."
-    echo
-    exit
-fi
 
 if [ ! -d "$AGENT_DIR" ]; then
     cd ${HOME}
